@@ -1,4 +1,4 @@
-package com.charlieandeli
+package com.charlieandeli;
 
 import com.birdbrain.Finch;
 
