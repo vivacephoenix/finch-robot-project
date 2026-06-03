@@ -5,11 +5,10 @@ import java.util.ArrayList;
 
 /**
  * FinalFinch Class
- * Demonstrates 6 APCSA/OOP Concepts: Inheritance, ArrayLists, Loops.
  */
 public class FinalFinch extends Finch {
 
-    // Arrays and ArrayLists for dynamic data tracking
+    // Arrays and ArrayLists
     private ArrayList<Integer> notes;
     private ArrayList<Double> beats; 
     private double beatDurationSec; 
@@ -48,11 +47,26 @@ public class FinalFinch extends Finch {
             1.0, 1.0, 2.0, 1.0,   1.0, 2.0, 2.0, 4.0
         };
 
-        // Loops (for-loop) populating lists dynamically
+        // Loops and for loops that populate lists
         for (int i = 0; i < melody.length; i++) {
             notes.add(melody[i]);
             beats.add(rhythm[i]);
         }
+    }
+
+    /**
+     * Method overloading for the general movement.
+     */
+    public void danceStep(int leftWheel, int rightWheel) {
+        this.setMotors(leftWheel, rightWheel);
+    }
+
+    /**
+     * Method overloading with synchronized motions and light parameters.
+     */
+    public void danceStep(int leftWheel, int rightWheel, int r, int g, int b) {
+        this.setMotors(leftWheel, rightWheel);
+        this.setBeak(r, g, b); 
     }
 
     public void stopMotors() {
